@@ -1,4 +1,4 @@
-package com.alura.screenmacth.screenmacth.calculos;
+package com.alura.screenmacth.calculos;
 
 public class FiltroRecomendaciones {
    public void filtra(Clasificable clasificable){

@@ -1,4 +1,7 @@
+package com.alura.screenmacth.principal;
+
 import com.alura.screenmacth.calculos.CalculadoraDeTiempo;
+import com.alura.screenmacth.calculos.Clasificable;
 import com.alura.screenmacth.calculos.FiltroRecomendaciones;
 import com.alura.screenmacth.modelos.Episodios;
 import com.alura.screenmacth.modelos.Pelicula;

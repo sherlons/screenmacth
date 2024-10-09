@@ -1,4 +1,4 @@
-package com.alura.screenmacth.scrrenmacth.modelos;
+package com.alura.screenmacth.modelos;
 
 public class Series extends Titulos {
     int temporadas;

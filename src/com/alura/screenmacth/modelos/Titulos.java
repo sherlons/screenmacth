@@ -1,4 +1,4 @@
-package com.alura.screenmacth.scrrenmacth.modelos;
+package com.alura.screenmacth.modelos;
 
 public class Titulos {
     private String nombre;
