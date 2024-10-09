@@ -1,9 +1,14 @@
-package com.aluracursos.scrrenmacth.modelos;
+package com.alura.screenmacth.scrrenmacth.modelos;
 
 public class Series extends Titulos {
     int temporadas;
     int episodiosPorTemporada;
     int minutosPorEpisodio;
+
+
+    public Series(String nombre, int fechaDenLanzamiento) {
+        super(nombre, fechaDenLanzamiento);
+    }
 
     public int getTemporadas() {
         return temporadas;

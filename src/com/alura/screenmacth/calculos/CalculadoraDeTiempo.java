@@ -1,7 +1,7 @@
-package com.aluracursos.screenmacth.calculos;
+package com.alura.screenmacth.screenmacth.calculos;
 
 
-import com.aluracursos.scrrenmacth.modelos.Titulos;
+import com.screenmacth.scrrenmacth.modelos.Titulos;
 
 
 public class CalculadoraDeTiempo {

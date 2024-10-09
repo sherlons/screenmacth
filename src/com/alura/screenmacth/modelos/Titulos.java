@@ -1,4 +1,4 @@
-package com.aluracursos.scrrenmacth.modelos;
+package com.alura.screenmacth.scrrenmacth.modelos;
 
 public class Titulos {
     private String nombre;
@@ -7,6 +7,11 @@ public class Titulos {
     public boolean incluidoEnElplan;
     private double sumaDeLasEvaluaciones;
     private int totalDeLasEvaluaciones;
+
+    public Titulos(String nombre, int fechaDenLanzamiento) {
+        this.nombre = nombre;
+        this.fechaDenLanzamiento = fechaDenLanzamiento;
+    }
 
     public String getNombre() {
         return nombre;
