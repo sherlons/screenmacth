@@ -1,6 +1,6 @@
 package com.alura.screenmacth.modelos;
 
-public class Titulos {
+public class Titulos implements Comparable<Titulos>{
     private String nombre;
     private int fechaDenLanzamiento;
     private int duracionEnMinutos;
@@ -54,5 +54,10 @@ public class Titulos {
     }
     public double calculaMedia(){
         return sumaDeLasEvaluaciones / totalDeLasEvaluaciones;
+    }
+
+    @Override
+    public int compareTo(Titulos otroTitulo) {
+        return this.getNombre().compareTo(otroTitulo.getNombre());
     }
 }
