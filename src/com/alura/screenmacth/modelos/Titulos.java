@@ -1,5 +1,6 @@
 package com.alura.screenmacth.modelos;
 
+import com.alura.screenmacth.exception.VariableCreadaPraraNAException;
 import com.google.gson.annotations.SerializedName;
 
 public class Titulos implements Comparable<Titulos>{
@@ -21,8 +22,13 @@ public class Titulos implements Comparable<Titulos>{
     public Titulos(TituloOmdb miTituloOmdb) {
         this.nombre = miTituloOmdb.title();
         this.fechaDenLanzamiento = Integer.valueOf(miTituloOmdb.year());
-        this.duracionEnMinutos = Integer.valueOf(miTituloOmdb.runtime().substring(0,2));
+        this.duracionEnMinutos = Integer.valueOf(miTituloOmdb.runtime().substring(0,3)
+                .replace(" ",""));
         this.genero = miTituloOmdb.genre();
+
+        if (miTituloOmdb.runtime().contains("N/A"))
+            throw new VariableCreadaPraraNAException("No registra Tiempo"
+                + " contiene un N/A");
     }
     public String getGenero(){return genero;}
     public String getNombre() {
