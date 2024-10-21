@@ -1,14 +1,14 @@
 package com.alura.screenmacth.exception;
 
-public class VariableCreadaPraraNAException extends RuntimeException {
-    private String mensaje;
+public class VariableCreadaPraraNAException extends RuntimeException     {
+    private String Message;
 
-    public VariableCreadaPraraNAException(String mensaje) {
-        this.mensaje = mensaje;
+    public VariableCreadaPraraNAException(String Message) {
+        this.Message = Message;
     }
 
     @Override
     public String getMessage() {
-        return this.mensaje;
+        return this.Message;
     }
 }

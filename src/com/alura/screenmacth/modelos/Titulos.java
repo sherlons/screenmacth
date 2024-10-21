@@ -4,15 +4,16 @@ import com.alura.screenmacth.exception.VariableCreadaPraraNAException;
 import com.google.gson.annotations.SerializedName;
 
 public class Titulos implements Comparable<Titulos>{
-    @SerializedName("Title")
+//    @SerializedName("Title")
     private String nombre;
-    @SerializedName("Year")
+//    @SerializedName("Year")
     private int fechaDenLanzamiento;
     private int duracionEnMinutos;
     public boolean incluidoEnElplan;
     private double sumaDeLasEvaluaciones;
     private int totalDeLasEvaluaciones;
     private String genero;
+
 
     public Titulos(String nombre, int fechaDenLanzamiento) {
         this.nombre = nombre;
@@ -22,15 +23,16 @@ public class Titulos implements Comparable<Titulos>{
     public Titulos(TituloOmdb miTituloOmdb) {
         this.nombre = miTituloOmdb.title();
         this.fechaDenLanzamiento = Integer.valueOf(miTituloOmdb.year());
+        this.genero = miTituloOmdb.genre();
+        //Exception para A/N
+        if (miTituloOmdb.runtime().contains("N/A")){
+            throw new VariableCreadaPraraNAException("No pude convertir la duracion, porque contiene un N/A");}
         this.duracionEnMinutos = Integer.valueOf(miTituloOmdb.runtime().substring(0,3)
                 .replace(" ",""));
-        this.genero = miTituloOmdb.genre();
-
-        if (miTituloOmdb.runtime().contains("N/A"))
-            throw new VariableCreadaPraraNAException("No registra Tiempo"
-                + " contiene un N/A");
     }
-    public String getGenero(){return genero;}
+    public String getGenero(){
+            return genero;
+        }
     public String getNombre() {
         return nombre;
     }
@@ -81,9 +83,9 @@ public class Titulos implements Comparable<Titulos>{
 
     @Override
     public String toString() {
-        return "nombre='" + nombre + '\'' +
+        return "(nombre='" + nombre + '\'' +
                 ", fechaDenLanzamiento=" + fechaDenLanzamiento +
                 ", dutracion= "+ duracionEnMinutos +
-                ", genero= "+ genero;
+                ", genero= "+ genero+")";
     }
 }

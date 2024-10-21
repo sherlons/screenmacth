@@ -1,0 +1,20 @@
+[
+  {
+    "Nombre": "Matrix",
+    "FechaDenLanzamiento": 1993,
+    "DuracionEnMinutos": 60,
+    "IncluidoEnElplan": false,
+    "SumaDeLasEvaluaciones": 0.0,
+    "TotalDeLasEvaluaciones": 0,
+    "Genero": "Action, Drama, Fantasy"
+  },
+  {
+    "Nombre": "Encanto",
+    "FechaDenLanzamiento": 2021,
+    "DuracionEnMinutos": 102,
+    "IncluidoEnElplan": false,
+    "SumaDeLasEvaluaciones": 0.0,
+    "TotalDeLasEvaluaciones": 0,
+    "Genero": "Animation, Comedy, Family"
+  }
+]
